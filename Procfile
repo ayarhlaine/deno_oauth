@@ -1,1 +1,1 @@
-web: denon run --allow-net=:${PORT} --allow-env --allow-read backend/src/main.ts --port=${PORT}
+web: deno run --allow-net=:${PORT} --allow-env --allow-read backend/src/main.ts --port=${PORT}
