@@ -27,9 +27,6 @@ router.post("/auth/logout", (ctx) => {
   ctx.response.status = 200;
 });
 
-
-router.use(authMidleware);
-
 router.get("/", async (ctx, next) => {
   try {
     await ctx.send({
@@ -40,6 +37,9 @@ router.get("/", async (ctx, next) => {
     await next();
   }
 });
+
+
+router.use(authMidleware);
 
 router.get("/auth", (ctx) => {
   ctx.response.body = ctx.app.state.user
