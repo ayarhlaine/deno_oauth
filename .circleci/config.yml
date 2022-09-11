@@ -26,7 +26,7 @@ jobs:
             key: app-build-cache-{{ .Branch }}
             paths:
               - ./build
-        - pack_ui_to_backend:
+        - run:
             name: Pack UI to Backend
             command: "mkdir ~/repo/backend/static & mv ~/repo/frontend/build/* ~/repo/backend/static/"
         - run:
