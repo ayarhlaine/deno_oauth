@@ -30,7 +30,7 @@ router.post("/auth/logout", (ctx) => {
 router.get("/", async (ctx, next) => {
   try {
     await ctx.send({
-      root: `${Deno.cwd()}/static`,
+      root: `${Deno.cwd()}/backend/static`,
       index: "index.html",
     });
   } catch(err) {
