@@ -27,20 +27,6 @@ router.post("/auth/logout", (ctx) => {
   ctx.response.status = 200;
 });
 
-router.get("/", async (ctx, next) => {
-  try {
-    await ctx.send({
-      root: `${Deno.cwd()}/backend/static`,
-      index: "index.html",
-    });
-  } catch(err) {
-    console.log("Error in serving static ui");
-    console.log(err)
-    await next();
-  }
-});
-
-
 router.use(authMidleware);
 
 router.get("/auth", (ctx) => {
