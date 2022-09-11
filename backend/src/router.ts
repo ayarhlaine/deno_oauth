@@ -39,7 +39,7 @@ router.get("/", async (ctx, next) => {
 });
 
 
-router.use(authMidleware);
+// router.use(authMidleware);
 
 router.get("/auth", (ctx) => {
   ctx.response.body = ctx.app.state.user
