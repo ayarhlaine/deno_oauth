@@ -39,9 +39,9 @@ workflows:
   build-deploy:
   jobs:
       - build_ui
-      - deploy:
-          requires:
-          - build_ui # only run deploy-via-git job if the build job has completed
-          filters:
-          branches:
-              only: main # only run deploy-via-git job on main branch
+      # - deploy:
+      #     requires:
+      #     - build_ui # only run deploy-via-git job if the build job has completed
+      #     filters:
+      #     branches:
+      #         only: main # only run deploy-via-git job on main branch
