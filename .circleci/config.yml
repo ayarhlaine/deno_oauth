@@ -28,10 +28,14 @@ jobs:
               - ./build
         - run:
             name: Pack UI to Backend
-            command: "mkdir ~/repo/backend/static & mv ~/repo/frontend/build/* ~/repo/backend/static/"
+            command: |
+              ls backend
+              mkdir ~/repo/backend/static & mv ~/repo/frontend/build/* ~/repo/backend/static/
+              ls backend
         - run:
             name: Deploy Main to Heroku
             command: |
+              ls backend
               git config --global user.email "ayarhlaine.dev@gmail.com"
               git config --global user.name "Ayar Hlaine"
               git add --all
