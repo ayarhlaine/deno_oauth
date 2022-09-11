@@ -11,7 +11,6 @@ export const authMidleware = async (ctx: Context<any>, next: () => Promise<unkno
             status: 401,
         }
         ctx.response.status = 401;
-        await next();
     }
     
     try {
@@ -24,6 +23,5 @@ export const authMidleware = async (ctx: Context<any>, next: () => Promise<unkno
             status: 401,
         }
         ctx.response.status = 401;
-        await next();
     }
 }
