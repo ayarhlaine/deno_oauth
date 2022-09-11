@@ -7,7 +7,7 @@ export const authMidleware = async (ctx: Context<any>, next: () => Promise<unkno
 
     if(!accessToken) {
         console.log('throw error')
-        ctx.throw(401);
+        // ctx.throw(401);
     }
     
     try {
@@ -15,6 +15,6 @@ export const authMidleware = async (ctx: Context<any>, next: () => Promise<unkno
         await next();
     } catch (err) {
         console.log(err)
-        ctx.throw(401);
+        // ctx.throw(401);
     }
 }
