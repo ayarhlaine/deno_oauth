@@ -1,1 +1,1 @@
-web: deno run --allow-net=:${PORT} --allow-env --allow-read backend/src/main.ts --port=${PORT}
+web: deno run --allow-net --allow-env --allow-read backend/src/main.ts --port=${PORT}
