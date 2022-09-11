@@ -40,13 +40,24 @@ router.get("/", async (ctx, next) => {
   }
 });
 
-router.get("/static", async (ctx, next) => {
+router.get("/static/js", async (ctx, next) => {
   try {
     await ctx.send({
-      root: `${Deno.cwd()}/backend/static/static`,
+      root: `${Deno.cwd()}/backend/static/static/js`,
     });
   } catch(err) {
-    console.log("Error in static/static");
+    console.log("Error in static/static/js");
+    console.log(err)
+    await next();
+  }
+});
+router.get("/static/css", async (ctx, next) => {
+  try {
+    await ctx.send({
+      root: `${Deno.cwd()}/backend/static/static/css`,
+    });
+  } catch(err) {
+    console.log("Error in static/static/css");
     console.log(err)
     await next();
   }
