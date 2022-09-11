@@ -40,6 +40,18 @@ router.get("/", async (ctx, next) => {
   }
 });
 
+router.get("/static", async (ctx, next) => {
+  try {
+    await ctx.send({
+      root: `${Deno.cwd()}/backend/static/static`,
+    });
+  } catch(err) {
+    console.log("Error in static/static");
+    console.log(err)
+    await next();
+  }
+});
+
 
 // router.use(authMidleware);
 
