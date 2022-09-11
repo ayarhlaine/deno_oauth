@@ -38,6 +38,7 @@ jobs:
               ls backend
               git config --global user.email "ayarhlaine.dev@gmail.com"
               git config --global user.name "Ayar Hlaine"
+              git fetch
               git pull
               git add --all
               git commit -am "added ui to backend"
