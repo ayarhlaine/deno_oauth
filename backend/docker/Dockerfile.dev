@@ -1,0 +1,8 @@
+FROM denoland/deno:1.25.1
+
+WORKDIR /deno_app
+
+# Prefer not to run as root.
+USER deno
+
+CMD /bin/sh
