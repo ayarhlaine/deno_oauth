@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "mv build/* ../backend/static/",
+    "postbuild": "mv build/* ./backend/static/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
