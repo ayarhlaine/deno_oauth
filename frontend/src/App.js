@@ -33,7 +33,19 @@ function App() {
             <UserInfo user={user} setUser={setUser}/>
           }
       </div>
-      <p>Source code can be found at: </p>
+      <footer>
+        <p>Supported account types</p>
+        <br />
+        <ul>
+          <li>Personal Microsoft accounts only</li>
+        </ul>
+        <br />
+        <p>Source code can be found at:&nbsp;
+          <a href="https://github.com/ayarhlaine/deno_oauth" target="_blank" rel="noopener noreferrer">Github Repo</a>
+        </p>
+        <br />
+        <p>Developed By: Ayar Hlaine</p>
+      </footer>
     </div>
   );
 }
