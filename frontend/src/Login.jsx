@@ -5,7 +5,7 @@ const Login = () => {
         if (process.env.NODE_ENV === 'development') {
           window.location.href = 'http://localhost:8080/auth/signin';
         } else {
-          window.location.href = 'https://' + window.location.hostname + '/signin';
+          window.location.href = 'https://' + window.location.hostname + '/auth/signin';
         }
       }
   return (
