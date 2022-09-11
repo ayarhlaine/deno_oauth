@@ -12,6 +12,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  background-color: #468C98;
+  height: 100%;
 }
 
 code {
@@ -20,27 +22,32 @@ code {
 }
 
 .App {
-  height: 100vh;
-  display: grid;
-  background-color: #468C98;
-  place-items: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-.App_Content {
+
+.App_Container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-width: 30%;
   background-color: #ADD9F4;
   padding: 1rem;
   border-radius: 12px;
 }
+
 .Login_Button {
-  padding: 10px;
-  width: 100%;
+  padding: 0.5rem 3rem;
   border-width: 0;
   background-color: #0066CC;
   color: white;
   cursor: pointer;
 }
+
 .Logout_Button {
-  padding: 10px;
-  width: 100%;
+  padding: 0.5rem 3rem;
   border-width: 0;
   background-color: #0066CC;
   color: white;

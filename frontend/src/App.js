@@ -23,16 +23,17 @@ function App() {
 
   return (
     <div className="App">
-      <div className="App_Content">
-        <h3>Microsoft Auth App using Deno + React</h3>
-        <br />
-        {
-          user === null ?
-          <Login />
-          :
-          <UserInfo user={user} setUser={setUser}/>
-        }
+      <h3>Microsoft Auth App using Deno + React</h3>
+      <div className="App_Container">
+          <br />
+          {
+            user === null ?
+            <Login />
+            :
+            <UserInfo user={user} setUser={setUser}/>
+          }
       </div>
+      <p>Source code can be found at: </p>
     </div>
   );
 }
