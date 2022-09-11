@@ -33,7 +33,9 @@ router.get("/", async (ctx, next) => {
       root: `${Deno.cwd()}/static`,
       index: "index.html",
     });
-  } catch {
+  } catch(err) {
+    console.log("Error in serving static ui");
+    console.log(err)
     await next();
   }
 });
