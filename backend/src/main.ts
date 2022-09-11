@@ -16,4 +16,6 @@ app.addEventListener("listen", ({ hostname, port, secure }) => {
   );
 });
 
-app.listen({ port: 8080 });
+const PORT = parseInt(Deno.env.toObject().PORT) || 8080
+
+app.listen({ port: PORT });
